@@ -4,4 +4,5 @@
 
 <div>
     This is a test connection to git.
+    This is a test connection to git.
 </div>
