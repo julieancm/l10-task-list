@@ -1,8 +1,13 @@
-<div>
-    Hello I'm a blade template!
-</div>
+<h1>
+    The list of tasks
+</h1>
 
 <div>
-    This is a test connection to git.
-    This is a test connection to git.
+    @forelse ($tasks as $task)
+        <div>
+            <a href="{{ route('tasks.show', ['id' => $task->id]) }}">{{ $task->title }}</a>
+        </div>
+    @empty
+        <div>There are no tasks!</div>
+    @endforelse
 </div>
